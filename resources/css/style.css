@@ -1,0 +1,650 @@
+*{
+    margin : 0;
+    padding : 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:focus{                                       /* for the form */
+    outline: none;
+}
+
+html{
+    color: #555;
+    font-family: 'Lato','Arial', sans-serif;
+    font-weight:300;
+    font-size: 20px;
+}
+
+h1,
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    margin-top:0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 240%;
+    word-spacing: 3px; 
+    letter-spacing: 1px;
+}
+
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, color 0.2s, border 0.2s;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{/*this has to be above the btn:hover because of the background color*/
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #ffffff;
+    margin-right:15px; 
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+   background-color: #cf6d17; 
+   }
+
+.btn-full:hover,
+.btn-full:active{
+    border: 1px solid #cf6d17;
+    color: #ffffff;
+}
+
+.btn-empty:link,
+.btn-empty:visited{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn-empty:hover,
+.btn-empty:active{
+    border: 1px solid #cf6d17;
+    color: #ffffff;
+}
+
+section{
+    padding: 80px 0px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    height: 2px;
+    background-color:#e67e22;
+    width: 100px;
+    margin: 30px auto 0px auto;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    -webkit-transition: color 0.2s, border-bottom 0.2s;
+    transition: color 0.2s, border-bottom 0.2s;
+
+}
+
+a:hover,
+a:active{
+    color:#555;
+    border-bottom: 1px solid transparent;
+}
+/*---------------------------------------------------------------------------------
+Header
+-----------------------------------------------------------------------------------*/
+
+header{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0,0.7)), to(rgb(0, 0, 0,0.7))),  url('../img/hero.jpg');
+    background-image: linear-gradient(rgb(0, 0, 0,0.7), rgb(0, 0, 0,0.7)),  url('../img/hero.jpg');
+    /*its like having 2 backgroumds, 
+    but one is a picture of black to black with 70% transparency. the gradient must come first.*/ 
+    height: 100vh; 
+    background-size: cover;
+    background-position:center; 
+    position: relative;
+}
+
+.logo{
+    height: 100px;
+    width:auto;
+    float:left;
+    margin-top:30px;
+}
+
+.logo-black{
+    display: none;
+    height: 50px;
+    width: auto;
+    float:left;
+    margin:5px 0;
+}
+
+nav{
+    margin:0 3%;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0px; /*i haven't seen the need for this yet */
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+.header-text{
+    position:absolute;
+    max-width: 1140px;
+    -webkit-transform: translate(30%, 150%);
+    transform: translate(30%, 150%);
+}
+
+/* mobile-nav */
+.mobile-nav-icon{
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon{
+    font-size: 200%;
+    color: #ffffff;
+}
+
+ .close{
+    display: none;
+} 
+
+/* sticky-nav */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 3%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0px; 
+    color: #555;
+}
+
+.sticky .logo{
+    display: none;
+}
+
+.sticky .logo-black{
+    display: block;
+} 
+
+ .sticky .main-nav{
+    margin-top: 18px;
+}
+
+.sticky .main-nav li{
+    margin: 0 20px;
+}  
+
+
+
+/*---------------------------------------------------------------------------------
+Features
+-----------------------------------------------------------------------------------*/
+.features{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.benefits{
+    display: grid;
+    width: 80%;
+    margin:50px 10% 0 10%;
+    grid-template-columns: auto auto auto auto;
+    -webkit-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.benefits>div>p{
+    font-size: 90%;
+    line-height: 145%;
+    text-align: justify;
+}
+
+.icon-big{
+    font-size: 200%;
+    display: block;
+    color: #e67e22; 
+}
+
+
+
+/*---------------------------------------------------------------------------------
+Meals
+-----------------------------------------------------------------------------------*/
+.section-meals{
+    padding: 0;
+}
+
+.meals-showcase{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 0px;
+}
+
+.meals-showcase li{
+    background-color: black;
+    overflow: hidden; 
+}
+
+
+.meals-showcase li img{
+    width: 100%; 
+    -webkit-transform: scale(1.15); 
+    transform: scale(1.15);
+    opacity: 0.7; 
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s; 
+    transition: opacity 0.5s, -webkit-transform 0.5s; 
+    transition: transform 0.5s, opacity 0.5s; 
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meals-showcase li img:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/*---------------------------------------------------------------------------------
+Steps
+-----------------------------------------------------------------------------------*/
+.section-steps{
+    background-color: #f4f4f4;
+}
+
+.steps-grid{
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: 30% 70%;
+}
+
+.one-of-two:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;    
+}
+
+.one-of-two:last-child{
+    padding-left: 15%;
+    margin-top: 70px;
+}
+
+.iphone{
+    width: 70%;
+}
+
+.steps{
+    margin-bottom: 50px;
+}
+
+.steps div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius:50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+}
+
+.steps:last-of-type{
+    margin-bottom: 40px;
+}
+
+.btn-download:link,
+.btn-download:visited{
+    border:0;
+}
+
+.btn-download img{
+    height: 50px;
+    margin-right: 10px;
+    width: auto;
+}
+
+/*---------------------------------------------------------------------------------
+Cities
+-----------------------------------------------------------------------------------*/
+.cities-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0 10%;
+}
+
+.city-of-four{
+    padding: 0 5px;
+}
+
+.city-of-four img{
+    width:100%;
+    height: 140px;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+.icon-small{
+    width: 30px;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+}
+
+/*---------------------------------------------------------------------------------
+TESTIMONIALS
+-----------------------------------------------------------------------------------*/
+.section-testimonials{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))),
+    url('../img/back-customers.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),
+    url('../img/back-customers.jpg');
+    background-size: cover;
+    color: #ffffff;
+    background-attachment: fixed;
+    padding-top: 70px;
+}
+
+.testimonial-grid{
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: auto auto auto;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+} 
+
+blockquote::before{
+    display:block;
+    content: "\201C";
+    font-size: 500%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    }
+
+/*---------------------------------------------------------------------------------
+Plans
+-----------------------------------------------------------------------------------*/
+.section-plans{
+    background-color: #f4f4f4;
+}
+
+.plans-grid{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+}
+
+.plan-box{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    -webkit-box-shadow: 0px 2px 2px #efefef;
+    box-shadow: 0px 2px 2px #efefef;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: #e8e8e8 1px solid;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+/*---------------------------------------------------------------------------------
+SIGNUP
+-----------------------------------------------------------------------------------*/
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 33% 66%;
+    margin: 10px 0px;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0px;
+}
+
+/*---------------------------------------------------------------------------------
+Footer
+-----------------------------------------------------------------------------------*/
+footer{
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0px;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 150%;
+}
+
+ion-icon[name=logo-facebook],
+ion-icon[name=logo-twitter],
+ion-icon[name=logo-snapchat],
+ion-icon[name=logo-instagram]{
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+ion-icon[name=logo-facebook]:hover{
+    color: #3b5998;
+}
+
+ion-icon[name=logo-twitter]:hover{
+    color: #1da1f2;
+}
+
+ion-icon[name=logo-snapchat]:hover{
+    color: #FEFC00;
+}
+
+ion-icon[name=logo-instagram]:hover{
+    color: #c32aa3;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*---------------------------------------------------------------------------------
+Animations
+-----------------------------------------------------------------------------------*/
+.js-waypoint-1,
+.js-waypoint-2,
+.js-waypoint-3{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js-waypoint-4{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js-waypoint-1.animate__animated,
+.js-waypoint-2.animate__animated,
+.js-waypoint-3.animate__animated{
+    opacity: 1;
+}

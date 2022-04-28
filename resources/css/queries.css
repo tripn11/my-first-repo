@@ -1,0 +1,286 @@
+@media only screen and (max-width: 1200px){
+    .benefits h3{
+        height: 50px;
+    }
+    .iphone{
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .steps{
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width:1145px){
+    .city-feature{
+        font-size: 80%;
+    }
+
+    .icon-small{
+        margin-right: 0px;
+    }
+
+    .testimonial-grid{
+        margin: 0 5%;
+    }
+}
+
+@media only screen and (max-width:1035px){
+    .cities-grid{
+        padding:0 8%;
+    }
+}
+
+/*----------------------------------------------------*/
+
+@media only screen and (max-width: 990px){
+    .cities-grid{
+        padding:0 2%;
+    }
+}
+
+@media only screen and (max-width: 975px){
+    .header-text{
+        width: 85vw;
+        height: 100vh;
+        -webkit-transform: translate(10%, 50%);
+        transform: translate(10%, 50%);
+        font-size: 85%;
+        overflow-x: hidden;  
+    }
+
+    .plans-grid{
+        width: 100%;
+    }    
+}
+
+@media only screen and (max-width: 900px){
+    .main-nav{
+        font-size: 70%;
+    }
+
+    .benefits{
+        width: 95%;
+        margin: 2%;
+    }
+
+    .benefits p{
+        padding-top: 5px;
+    }
+
+    .section-features{
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-features h2{
+        padding-top: 5%;
+    }
+
+    .cities-grid{
+        font-size: 90%;
+    }
+}
+
+@media only screen and (max-width: 790px){
+    .section-testimonials{
+        font-size: 90%;
+    }
+
+    .section-plans{
+        font-size: 90%;
+    }
+
+    .contact-form{
+        width: 98%;
+    }
+
+    .one-of-3{
+        margin-right: 5%;
+    }
+
+    .cities-grid{
+        font-size: 85%;
+    }
+}
+/*----------------------------------------------------*/
+@media only screen and (max-width: 767px){
+    .main-nav{
+        display: none;
+    }
+
+    .mobile-nav-icon{
+        display: inline-block;
+    }
+
+    .sticky .mobile-nav-icon {
+        margin-top: 10px;
+    }
+
+    .sticky .mobile-nav-icon ion-icon{
+        color: #555;
+    }
+
+    .main-nav{
+        float: left;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .main-nav li{
+        display: block;
+        margin: 20px;
+        padding: 7px 0;
+    }
+
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        border: 0;
+    }
+
+    .sticky .main-nav{
+        margin-top: 10px;
+    }
+
+    .header-text{
+        -webkit-transform: translate(2%, 50%);
+        transform: translate(2%, 50%);
+        font-size: 70%;
+    }
+
+    .features{
+        width: 98%;
+        margin-left:2%;
+    }
+
+    .benefits{
+        grid-template-columns: 100%;
+    }
+
+    .benefits h3{
+        height: 10px;
+        font-weight: 400;
+    }
+
+    .benefits div{
+        margin-bottom: 20px;
+    }
+
+    section{
+        padding-top: 3%;
+    }
+
+    .steps-grid{
+        grid-template-columns: 100%;
+        margin: 0 1%;
+    }
+
+    .iphone{
+        width: 40%;
+        margin-top: 0px;
+    }
+
+    .one-of-two:first-child {
+        text-align: center;
+    }
+
+    .one-of-two:last-child{
+        padding: 0;
+    }
+
+    .btn-download img {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    .cities h2{
+        margin-bottom: 40px;
+    }
+
+    h2::after {
+        margin-top: 15px;
+    }
+
+    .city-of-four h3{
+        margin-bottom: 2px;
+    }
+
+    .cities-grid{
+        grid-template-columns: 70%;
+        padding-left:20%;
+    }
+
+    .city-of-four img{
+        height: 60%;
+        margin-bottom: 0px;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 90%;
+    }
+
+    .plans-grid {
+        grid-template-columns: 100%;
+    }
+
+    .plan-of-three{
+        padding-bottom: 2%;
+    }
+
+    .plan-of-three:last-child{
+        padding-bottom: 0;
+    }
+}
+@media only screen and (max-width: 700px){
+    footer{
+        font-size: 40%;
+        padding: 3%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .header-text {
+        -webkit-transform: translate(2%, 40%);
+        transform: translate(2%, 40%);
+    }
+
+    .cities{
+        padding-bottom: 1%;
+    }
+
+    .cities-grid {
+        grid-template-columns: 90%;
+        padding-left: 10%;
+    }
+
+    .city-of-four{
+        margin-bottom: 5%;
+    } 
+
+    .city-of-four h3{
+        font-weight: 400;
+    }
+
+    .city-feature {
+        font-size: 100%;
+    }
+
+    .section-plans{
+        padding-bottom: 1%;
+    }
+
+    .plan-box {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    form{
+        font-size: 80%;
+    }
+    
+    .footer-nav li,
+    .social-links li {
+        margin-right: 5px;   
+    }
+}
